@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="6xGkz_gLEbY3aWmNVw5pWVmw1mbKPME_nDoF5afxdd0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
     <title>Anukul's Tuition's site</title>
@@ -243,15 +243,162 @@
             gap: 8px;
             margin-top: 8px;
         }
+        
+        
+        body {
+          font-family: Arial;
+          text-align: center;
+          background: #f2f2f2;
+        }
+        #loginBox {
+          margin-top: 100px;
+        }
+        
+        input {
+          padding: 10px;
+          margin: 10px;
+          
+        }
+        button {
+          padding: 10px 20px;
+          background: blue;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          
+        }
+
+.photo {
+  display: inline-block;
+  margin: 10px;
+  position: relative;
+}
+
+.photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.deleteBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: red;
+  color: white;
+  border: none;
+}
+
+
+#gallerySection {
+  padding: 10px;
+}
+
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.photo img {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .photo img {
+    max-width: 90px;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  input {
+    width: 90%;
+  }
+body {
+  background: black;
+  color: white;
+}
+.photo {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+.deleteBtn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 5px 8px;
+}
+#paymentSection input {
+  padding: 8px;
+  margin: 5px;
+}
+
+#paymentSection button {
+  padding: 8px 15px;
+  background: green;
+  color: white;
+  border: none;
+}
+
+#paymentList div {
+  margin: 8px;
+  padding: 8px;
+  background: #eee;
+  border-radius: 5px;
+}
+body {
+      
+      font-family: Arial;
+      text-align: center;
+    }
+
+    .box {
+      background: black;
+      width: 340px;
+      margin: 50px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px gray;
+    }
+
+    input, select {
+      width: 85%;
+      padding: 6px;
+      margin: 5px;
+    }
+
+    button {
+      padding: 8px 12px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none;
+    }
+
     </style>
 </head>
 <body>
+  
 
 <!-- PASSWORD BLOCK - Login Screen -->
 <div id="passwordBlock" class="password-block">
     <div class="glass-card p-4 p-md-5 text-center" style="width: 92%; max-width: 440px;">
         <i class="fas fa-chalkboard-user fa-3x text-warning mb-3"></i>
-        <h2 class="fw-bold">🔐 At present, you're going into Anukul's website</h2>
+        <h2 class="fw-bold">🔐 Now, You're entering in</h2>
         <p class="text-secondary">Enter Your Password</p>
         <input type="password" id="masterPasswordInput" class="form-control mb-3" placeholder="••••••••" autocomplete="off">
         <button id="unlockMainBtn" class="btn btn-gold w-100 py-2">Unlock <i class="fas fa-arrow-right"></i></button>
@@ -281,7 +428,7 @@
             </div>
             <div class="mb-4">
                 <label class="fw-bold">👤 My Profile Photo URL</label>
-                <input type="text" id="setupProfilePhoto" class="form-control" placeholder="https://drive.google.com/file/d/1o8HWrghdIA7HZrfHSJiX7p0tlMsQOJxD/view?usp=drivesdk">
+                <input type="https://drive.google.com/uc?export=view&id=17YGA5YR6RT9ZgdtGs3n8y75LmUM8-uLe" id="setupProfilePhoto" class="form-control" placeholder="https://drive.google.com/file/d/1o8HWrghdIA7HZrfHSJiX7p0tlMsQOJxD/view?usp=drivesdk">
                 <small>Leave empty for default avatar</small>
             </div>
             <div class="mb-4">
@@ -294,7 +441,7 @@
             </div>
             <div class="mb-4">
                 <label class="fw-bold">📞 Contact Mobile</label>
-                <input type="text" id="setupUserMobile" class="form-control" placeholder="+91 98765 43210">
+                <input type="text" id="setupUserMobile" class="form-control" placeholder="+91 7005243963">
             </div>
             
             <!-- Due Targets Setup (NEW) -->
@@ -342,7 +489,7 @@
             <div class="mt-2 mt-sm-0">
                 <i class="fas fa-calendar-alt text-warning"></i> 
                 <span class="live-time" id="liveDateTime"></span>
-                <span class="date-update-badge" id="dateUpdateStatus">🔄 Now you all in the website of Anukul</span>
+                <span class="date-update-badge" id="dateUpdateStatus">🔄 Now you all are  in the website of Anukul</span>
             </div>
         </div>
 
@@ -399,81 +546,7 @@
             <div class="tab-pane fade" id="biologyPanel"><div class="glass-card p-4" id="biologySubjectArea"></div></div>
         </div>
 
-        <!-- SUMMARY + DUE SECTION with PASSWORD PROTECTION -->
-        <div class="glass-card mt-5 p-4" id="summarySection">
-            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
-                <h4><i class="fas fa-chart-line text-warning"></i> Total Summary & Payment Due</h4>
-                <div class="d-flex gap-2">
-                    <button id="refreshSummaryBtn" class="btn btn-outline-gold btn-sm" style="display: none;">
-                        <i class="fas fa-sync-alt"></i> Refresh
-                    </button>
-                    <button id="resetAllDataBtn" class="btn btn-danger-outline btn-sm" style="display: none;">
-                        <i class="fas fa-trash-alt"></i> Reset All Data
-                    </button>
-                </div>
-            </div>
-            
-            <div id="summaryLocked" class="summary-locked">
-                <i class="fas fa-lock fa-3x text-warning mb-3"></i>
-                <h5>Summary is Locked</h5>
-                <p class="text-secondary">Enter password to view total summary & manage due payments</p>
-                <input type="password" id="summaryPasswordInput" class="form-control mb-3" style="max-width: 300px; margin: 0 auto;" placeholder="Enter summary password">
-                <button id="unlockSummaryBtn" class="btn btn-gold">Unlock Summary <i class="fas fa-unlock-alt"></i></button>
-                <div id="summaryErrorMsg" class="text-danger mt-2 small"></div>
-                <div class="mt-3 small text-secondary"><i class="fas fa-key"></i> Hint: Fixed access key: 7@6Anukul@15</div>
-            </div>
-            
-            <div id="summaryUnlocked" class="summary-unlocked">
-                <!-- DUE CARDS WITH PAY OPTION -->
-                <div class="row g-4 mb-5" id="dueCardsContainer">
-                    <!-- Physics Due Card -->
-                    <div class="col-md-4">
-                        <div class="due-card text-center">
-                            <i class="fas fa-atom fa-2x text-warning"></i>
-                            <h5 class="mt-2">Physics Due</h5>
-                            <div class="remaining-highlight" id="physicsRemainingAmount">₹0</div>
-                            <small>Target: ₹<span id="physicsTargetAmount">0</span> | Paid: ₹<span id="physicsPaidAmount">0</span></small>
-                            <div class="payment-input-group mt-3">
-                                <input type="number" id="physicsPayInput" class="form-control form-control-sm" placeholder="Amount to pay" step="100">
-                                <button class="btn btn-sm btn-gold pay-due-btn" data-subject="physics">Pay Now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Chemistry Due Card -->
-                    <div class="col-md-4">
-                        <div class="due-card text-center">
-                            <i class="fas fa-flask fa-2x text-warning"></i>
-                            <h5 class="mt-2">Chemistry Due</h5>
-                            <div class="remaining-highlight" id="chemistryRemainingAmount">₹0</div>
-                            <small>Target: ₹<span id="chemistryTargetAmount">0</span> | Paid: ₹<span id="chemistryPaidAmount">0</span></small>
-                            <div class="payment-input-group mt-3">
-                                <input type="number" id="chemistryPayInput" class="form-control form-control-sm" placeholder="Amount to pay" step="100">
-                                <button class="btn btn-sm btn-gold pay-due-btn" data-subject="chemistry">Pay Now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Biology Due Card -->
-                    <div class="col-md-4">
-                        <div class="due-card text-center">
-                            <i class="fas fa-dna fa-2x text-warning"></i>
-                            <h5 class="mt-2">Biology Due</h5>
-                            <div class="remaining-highlight" id="biologyRemainingAmount">₹0</div>
-                            <small>Target: ₹<span id="biologyTargetAmount">0</span> | Paid: ₹<span id="biologyPaidAmount">0</span></small>
-                            <div class="payment-input-group mt-3">
-                                <input type="number" id="biologyPayInput" class="form-control form-control-sm" placeholder="Amount to pay" step="100">
-                                <button class="btn btn-sm btn-gold pay-due-btn" data-subject="biology">Pay Now</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="row g-3 mt-2">
-                    <div class="col-md-4"><div class="bg-dark bg-opacity-50 p-3 rounded-4 text-center"><h5>⚛️ Physics</h5><span id="totalPhysicsDays">0</span> days | ₹<span id="totalPhysicsAmount">0</span></div></div>
-                    <div class="col-md-4"><div class="bg-dark bg-opacity-50 p-3 rounded-4 text-center"><h5>🧪 Chemistry</h5><span id="totalChemDays">0</span> days | ₹<span id="totalChemAmount">0</span></div></div>
-                    <div class="col-md-4"><div class="bg-dark bg-opacity-50 p-3 rounded-4 text-center"><h5>🧬 Biology</h5><span id="totalBioDays">0</span> days | ₹<span id="totalBioAmount">0</span></div></div>
-                </div>
-            </div>
-        </div>
+
 
         <!-- CONTACT SECTION -->
         <div class="glass-card mt-4 p-4">
@@ -495,6 +568,64 @@
         </div>
     </div>
 </div>
+
+
+<div class="box">
+  <h3>🔒 PAYMENT DUE</h3>
+
+  <!-- Lock -->
+  <div id="lockBox">
+    <input type="password" id="password" placeholder="Enter Password"><br>
+    <button onclick="unlock()">Unlock</button>
+  </div>
+
+  <!-- Content -->
+  <div id="content" class="hidden">
+
+    <select id="subject" onchange="loadData()">
+      <option>Physics</option>
+      <option>Chemistry</option>
+      <option>Biology</option>
+      <option>English</option>
+    </select><br>
+
+    <input type="number" id="paid" placeholder="Paid Amount"><br>
+    <input type="number" id="due" placeholder="Due Amount"><br>
+
+    <button onclick="saveData()">Payment Done</button>
+    <button onclick="printData()">Print</button><br>
+
+    <button onclick="deleteData()">Delete</button>
+    <button onclick="clearAll()">Clear All</button>
+
+    <p id="result"></p>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<footer style="text-align: center; padding: 20px; background-color: #f1f1f1; margin-top: 50px;">
+    <a href="gallery.html" style="text-decoration: none; color: black; font-size: 18px;">Commons</a>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- Toast Notification -->
 <div class="toast-notification" id="toastMessage" style="display: none;">
@@ -739,7 +870,7 @@
             </div>
             <div class="row g-3 mb-4">
                 <div class="col-md-3">
-                    <label>📅 Date <span class="text-warning small">(You do what you want below)</span></label>
+                    <label>📅 Date <span class="text-warning small">(How is it? Please comment below or contact via Gmail)</span></label>
                     <input type="date" id="${subjectKey}_date" class="form-control" value="${todayDate}">
                 </div>
                 <div class="col-md-3">
@@ -893,7 +1024,7 @@
         const profileImg = document.getElementById('setupProfilePhoto').value.trim() || 'https://ui-avatars.com/api/?background=ffc107&color=000&bold=true&size=80&name=User';
         const fullName = document.getElementById('setupUserName').value.trim() || 'Student';
         const className = document.getElementById('setupUserClass').value.trim() || 'Grade 12';
-        const mobileFooter = document.getElementById('setupUserMobile').value.trim() || '+91 9876543210';
+        const mobileFooter = document.getElementById('setupUserMobile').value.trim() || '+91 7005243963';
         
         // Save due targets from setup
         dueTargets = {
@@ -962,6 +1093,180 @@
     } else {
         showSetupBlock();
     }
+    
+
+// 🔐 LOGIN SYSTEM
+const correctPassword = "7@6Anukul@15";
+
+function checkLogin() {
+  const input = document.getElementById("password").value;
+
+  if (input === correctPassword) {
+    document.getElementById("loginBox").style.display = "none";
+    document.getElementById("mainContent").style.display = "block";
+  } else {
+    alert("Wrong Password");
+  }
+}
+
+// 🔐 PAYMENT PASSWORD
+const paymentPassword = "PAYMENT DUE";
+
+function checkPaymentLogin() {
+  const input = document.getElementById("paymentPass").value;
+
+  if (input === paymentPassword) {
+    document.getElementById("paymentSection").style.display = "block";
+    document.getElementById("paymentLogin").style.display = "none";
+    loadPayments();
+  } else {
+    alert("Wrong Password");
+  }
+}
+
+// 💾 SAVE PAYMENT
+function savePayment() {
+  const subject = document.getElementById("subject").value;
+  const paid = document.getElementById("paidAmount").value;
+  const due = document.getElementById("dueAmount").value;
+
+  if (!paid && !due) return;
+
+  let data = JSON.parse(localStorage.getItem("payments") || "[]");
+
+  const today = new Date().toLocaleDateString();
+
+  data.push({
+    subject: subject,
+    paid: paid,
+    due: due,
+    date: today
+  });
+
+  localStorage.setItem("payments", JSON.stringify(data));
+
+  document.getElementById("paidAmount").value = "";
+  document.getElementById("dueAmount").value = "";
+
+  loadPayments();
+}
+
+// 📋 LOAD PAYMENT
+function loadPayments() {
+  const list = document.getElementById("paymentList");
+  list.innerHTML = "";
+
+  let data = JSON.parse(localStorage.getItem("payments") || "[]");
+
+  data.forEach((item, index) => {
+    const div = document.createElement("div");
+
+    div.innerHTML = `
+      📘 ${item.subject} | 📅 ${item.date} <br>
+      💰 Paid: ${item.paid || 0} | ❗ Due: ${item.due || 0}
+      <button onclick="deletePayment(${index})">X</button>
+    `;
+
+    list.appendChild(div);
+  });
+}
+
+// ❌ DELETE
+function deletePayment(index) {
+  let data = JSON.parse(localStorage.getItem("payments") || "[]");
+  data.splice(index, 1);
+  localStorage.setItem("payments", JSON.stringify(data));
+  loadPayments();
+}
+
+const PASSWORD = "PAYMENT DUE";
+
+function unlock() {
+  let input = document.getElementById("password").value;
+
+  if(input === PASSWORD) {
+    document.getElementById("lockBox").classList.add("hidden");
+    document.getElementById("content").classList.remove("hidden");
+    loadData(); // auto load
+  } else {
+    alert("Wrong Password!");
+  }
+}
+
+// Save / Update
+function saveData() {
+  let sub = document.getElementById("subject").value;
+  let paid = document.getElementById("paid").value;
+  let due = document.getElementById("due").value;
+
+  if(paid === "" || due === "") {
+    alert("Fill the box");
+    return;
+  }
+
+  let data = {paid: paid, due: due};
+  localStorage.setItem(sub, JSON.stringify(data));
+
+  // ✅ Show saved message
+  document.getElementById("result").innerText =
+    sub + " saved successfully!";
+
+setTimeout(() => {
+  document.getElementById("result").innerText = "";
+}, 2000);
+
+  // ✅ Clear input fields (important)
+  document.getElementById("paid").value = "";
+  document.getElementById("due").value = "";
+}
+
+// Load per subject (important feature)
+function loadData() {
+  let sub = document.getElementById("subject").value;
+  let data = localStorage.getItem(sub);
+
+  if(data) {
+    let obj = JSON.parse(data);
+    document.getElementById("paid").value = obj.paid;
+    document.getElementById("due").value = obj.due;
+    document.getElementById("result").innerText =
+      sub + " loaded!";
+  } else {
+    document.getElementById("paid").value = "";
+    document.getElementById("due").value = "";
+    document.getElementById("result").innerText = "No data";
+  }
+}
+
+// Print সব subject
+function printData() {
+  let subjects = ["Physics","Chemistry","Biology","English"];
+  let output = "";
+
+  subjects.forEach(sub => {
+    let data = localStorage.getItem(sub);
+    if(data) {
+      let obj = JSON.parse(data);
+      output += sub + " → Paid: " + obj.paid + ", Due: " + obj.due + "\n";
+    }
+  });
+
+  alert(output || "No data found");
+}
+
+// Delete selected subject
+function deleteData() {
+  let sub = document.getElementById("subject").value;
+  localStorage.removeItem(sub);
+  loadData();
+}
+
+// Clear all
+function clearAll() {
+  localStorage.clear();
+  loadData();
+  document.getElementById("result").innerText = "All data cleared!";
+}
 
 </script>
 </body>
